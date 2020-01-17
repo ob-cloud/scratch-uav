@@ -245,7 +245,7 @@ const GUIComponent = props => {
                                 />
                             </Box>
 
-                            {/* Extension Button */}
+                            {/* Extension Button 拓展按钮 */}
                             {/* <Box className={styles.extensionButtonContainer}>
                                 <button
                                     className={styles.extensionButton}
