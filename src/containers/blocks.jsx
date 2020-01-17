@@ -555,14 +555,16 @@ class Blocks extends React.Component {
                         onRequestClose={onRequestCloseExtensionLibrary}
                     />
                 ) : null}
-                {customProceduresVisible ? (
+
+                {/* 自定义积木模块 */}
+                {/* {customProceduresVisible ? (
                     <CustomProcedures
                         options={{
                             media: options.media
                         }}
                         onRequestClose={this.handleCustomProceduresClose}
                     />
-                ) : null}
+                ) : null} */}
             </React.Fragment>
         );
     }
