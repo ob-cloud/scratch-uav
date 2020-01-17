@@ -244,7 +244,9 @@ const GUIComponent = props => {
                                     vm={vm}
                                 />
                             </Box>
-                            <Box className={styles.extensionButtonContainer}>
+
+                            {/* Extension Button */}
+                            {/* <Box className={styles.extensionButtonContainer}>
                                 <button
                                     className={styles.extensionButton}
                                     title={intl.formatMessage(messages.addExtension)}
@@ -256,10 +258,14 @@ const GUIComponent = props => {
                                         src={addExtensionIcon}
                                     />
                                 </button>
-                            </Box>
-                            <Box className={styles.watermark}>
+                            </Box> */}
+
+                            {/* right top watermark */}
+                            {/* <Box className={styles.watermark}>
                                 <Watermark />
-                            </Box>
+                            </Box> */}
+
+                            {/* original tab list */}
                             {/* <Tabs
                                 forceRenderTabPanel
                                 className={tabClassNames.tabs}
@@ -359,7 +365,8 @@ const GUIComponent = props => {
                             ) : null} */}
                         </Box>
 
-                        <Box className={classNames(styles.stageAndTargetWrapper, styles[stageSize])}>
+                        {/* Stage */}
+                        {/* <Box className={classNames(styles.stageAndTargetWrapper, styles[stageSize])}>
                             <StageWrapper
                                 isRendererSupported={isRendererSupported}
                                 isRtl={isRtl}
@@ -372,7 +379,7 @@ const GUIComponent = props => {
                                     vm={vm}
                                 />
                             </Box>
-                        </Box>
+                        </Box> */}
                     </Box>
                 </Box>
                 <DragLayer />
