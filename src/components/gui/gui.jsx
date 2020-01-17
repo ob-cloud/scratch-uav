@@ -231,7 +231,36 @@ const GUIComponent = props => {
                 <Box className={styles.bodyWrapper}>
                     <Box className={styles.flexWrapper}>
                         <Box className={styles.editorWrapper}>
-                            <Tabs
+                            {/* Sidebar ToolBox */}
+                            <Box className={styles.blocksWrapper}>
+                                <Blocks
+                                    canUseCloud={canUseCloud}
+                                    grow={1}
+                                    isVisible={blocksTabVisible}
+                                    options={{
+                                        media: `${basePath}static/blocks-media/`
+                                    }}
+                                    stageSize={stageSize}
+                                    vm={vm}
+                                />
+                            </Box>
+                            <Box className={styles.extensionButtonContainer}>
+                                <button
+                                    className={styles.extensionButton}
+                                    title={intl.formatMessage(messages.addExtension)}
+                                    onClick={onExtensionButtonClick}
+                                >
+                                    <img
+                                        className={styles.extensionButtonIcon}
+                                        draggable={false}
+                                        src={addExtensionIcon}
+                                    />
+                                </button>
+                            </Box>
+                            <Box className={styles.watermark}>
+                                <Watermark />
+                            </Box>
+                            {/* <Tabs
                                 forceRenderTabPanel
                                 className={tabClassNames.tabs}
                                 selectedIndex={activeTabIndex}
@@ -324,10 +353,10 @@ const GUIComponent = props => {
                                 <TabPanel className={tabClassNames.tabPanel}>
                                     {soundsTabVisible ? <SoundTab vm={vm} /> : null}
                                 </TabPanel>
-                            </Tabs>
-                            {backpackVisible ? (
+                            </Tabs> */}
+                            {/* {backpackVisible ? (
                                 <Backpack host={backpackHost} />
-                            ) : null}
+                            ) : null} */}
                         </Box>
 
                         <Box className={classNames(styles.stageAndTargetWrapper, styles[stageSize])}>
