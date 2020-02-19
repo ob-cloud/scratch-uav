@@ -686,6 +686,18 @@ const operators = function () {
     `;
 };
 
+const uav = function () {
+    return `
+    <category
+        name="%{BKY_CATEGORY_UAV}"
+        id="uav"
+        colour="#FF8C1A"
+        secondaryColour="#DB6E00">
+        <block type="uav_calibration"/>
+    </category>
+    `;
+};
+
 const variables = function () {
     return `
     <category
@@ -752,18 +764,20 @@ const makeToolboxXML = function (isStage, targetId, categoriesXML = [],
     const operatorsXML = moveCategory('operators') || operators(isStage, targetId);
     const variablesXML = moveCategory('data') || variables(isStage, targetId);
     const myBlocksXML = moveCategory('procedures') || myBlocks(isStage, targetId);
+    const uavXML = moveCategory('uav') || uav(isStage, targetId);
 
     const everything = [
         xmlOpen,
-        motionXML, gap,
-        looksXML, gap,
-        soundXML, gap,
-        eventsXML, gap,
+        uavXML, gap,
+        // motionXML, gap,
+        // looksXML, gap,
+        // soundXML, gap,
+        // eventsXML, gap,
         controlXML, gap,
-        sensingXML, gap,
+        // sensingXML, gap,
         operatorsXML, gap,
-        // variablesXML, gap,
-        // myBlocksXML
+        variablesXML, gap,
+        myBlocksXML
     ];
 
     for (const extensionCategory of categoriesXML) {
