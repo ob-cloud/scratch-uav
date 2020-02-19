@@ -12,10 +12,10 @@ const BlocksComponent = props => {
     } = props;
     return (
         <Box
-            className={classNames(styles.blocks, {
-                [styles.dragOver]: dragOver
-            })}
-            {...componentProps}
+        className={classNames(styles.blocks, {
+            [styles.dragOver]: dragOver
+        })}
+        {...componentProps}
             componentRef={containerRef}
         />
     );
