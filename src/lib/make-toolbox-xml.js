@@ -694,19 +694,45 @@ const uav = function () {
     <category
         name="无人机"
         id="uav"
-        colour="#FF8C1A"
-        secondaryColour="#DB6E00">
-        <block type="uav_calibration"/>
-        <block type="uav_text"/>
-        <block type="uav_operator">
-            <value name="NUM1">
+        colour="#333333"
+        secondaryColour="#444444">
+        <block type="uav_cal"/>
+        <block type="uav_lock"/>
+        <block type="uav_unlock"/>
+        <block type="uav_takeoff"/>
+        <block type="uav_landing"/>
+        <block type="uav_fly_rise">
+            <value name="NUM">
                 <shadow type="math_number">
-                    <field name="NUM">1</field>
+                    <field name="NUM">30</field>
                 </shadow>
             </value>
-            <value name="NUM2">
+        </block>
+        <block type="uav_fly_down">
+            <value name="NUM">
                 <shadow type="math_number">
-                    <field name="NUM">1</field>
+                    <field name="NUM">30</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="uav_fly_direction">
+            <value name="NUM">
+                <shadow type="math_number">
+                    <field name="NUM">30</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="uav_fly_turn">
+            <value name="NUM">
+                <shadow type="math_number">
+                    <field name="NUM">30</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="uav_send_message">
+            <value name="MSG">
+                <shadow type="text">
+                    <field name="TEXT">message</field>
                 </shadow>
             </value>
         </block>
