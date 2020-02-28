@@ -246,7 +246,7 @@ const GUIComponent = props => {
                             </Box>
 
                             {/* Extension Button 拓展按钮 */}
-                            {/* <Box className={styles.extensionButtonContainer}>
+                            <Box className={styles.extensionButtonContainer}>
                                 <button
                                     className={styles.extensionButton}
                                     title={intl.formatMessage(messages.addExtension)}
@@ -258,7 +258,7 @@ const GUIComponent = props => {
                                         src={addExtensionIcon}
                                     />
                                 </button>
-                            </Box> */}
+                            </Box>
 
                             {/* right top watermark */}
                             {/* <Box className={styles.watermark}>
@@ -366,7 +366,7 @@ const GUIComponent = props => {
                         </Box>
 
                         {/* Stage */}
-                        {/* <Box className={classNames(styles.stageAndTargetWrapper, styles[stageSize])}>
+                        <Box className={classNames(styles.stageAndTargetWrapper, styles[stageSize])}>
                             <StageWrapper
                                 isRendererSupported={isRendererSupported}
                                 isRtl={isRtl}
@@ -379,7 +379,7 @@ const GUIComponent = props => {
                                     vm={vm}
                                 />
                             </Box>
-                        </Box> */}
+                        </Box>
                     </Box>
                 </Box>
                 <DragLayer />
