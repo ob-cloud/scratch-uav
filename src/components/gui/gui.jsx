@@ -21,6 +21,7 @@ import MenuBar from '../menu-bar/menu-bar.jsx';
 import CostumeLibrary from '../../containers/costume-library.jsx';
 import BackdropLibrary from '../../containers/backdrop-library.jsx';
 import Watermark from '../../containers/watermark.jsx';
+import Controls from '../../containers/controls.jsx';
 
 import Backpack from '../../containers/backpack.jsx';
 import WebGlModal from '../../containers/webgl-modal.jsx';
@@ -232,6 +233,10 @@ const GUIComponent = props => {
                     <Box className={styles.flexWrapper}>
                         <Box className={styles.editorWrapper}>
                             {/* Sidebar ToolBox */}
+                            <Controls
+                                vm={vm}
+                                className={styles.fixedBtn} 
+                            />
                             <Box className={styles.blocksWrapper}>
                                 <Blocks
                                     canUseCloud={canUseCloud}
