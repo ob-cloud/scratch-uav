@@ -1,8 +1,34 @@
 # scratch-gui
 #### Scratch GUI is a set of React components that comprise the interface for creating and running Scratch 3.0 projects
 
-[![Build Status](https://travis-ci.com/LLK/scratch-gui.svg?token=Yfq2ryN1BwaxDME69Lnc&branch=master)](https://travis-ci.com/LLK/scratch-gui)
-[![Greenkeeper badge](https://badges.greenkeeper.io/LLK/scratch-gui.svg)](https://greenkeeper.io/)
+## 项目结构
+
+```yml
+├── build                    # 默认编译后的文件夹
+│   ├── static               # 静态资源
+│   ├── index.html
+│   ├── gui.js
+│   ├── lib.js               # 编译后主要的js文件
+├── src
+│   ├── components           # UI组件，负责页面呈现
+│   ├── containers           # 容器组件，承载容器组件业务逻辑
+│   ├── css                  # 全局通用css
+│   ├── examples             # 集成测试用例
+│       ├── extensions       # 拓展案例
+│   ├── lib                  # 插件及高阶组件
+│       ├── audio            # 声音插件
+│       ├── backpack         # 背包插件
+│       ├── default-project  # 默认项目
+│       ├── libraries        # 素材库相关
+│       ├── video            # 视频模块
+│   ├── playground           # 编译后页面的模版
+│   ├── reducers             # 全局状态控制
+├── test                     # 测试用例
+├── translations             # 翻译库
+├── README.md
+└── package.json
+└── webpack.consig.js
+```
 
 ## Installation
 This requires you to have Git and Node.js installed.
