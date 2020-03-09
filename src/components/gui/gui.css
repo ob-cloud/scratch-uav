@@ -319,3 +319,11 @@ $fade-out-distance: 15px;
 :global(.ReactModal__Body--open) {
     overflow: hidden;
 }
+
+/* 启动按钮布局 */
+.fixed-btn {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 99;
+}
