@@ -407,26 +407,29 @@ const control = function (isStage) {
         <block id="repeat_until" type="control_repeat_until"/>
         ${blockSeparator}
         <block type="control_stop"/>
-        ${blockSeparator}
-        ${isStage ? `
-            <block type="control_create_clone_of">
-                <value name="CLONE_OPTION">
-                    <shadow type="control_create_clone_of_menu"/>
-                </value>
-            </block>
-        ` : `
-            <block type="control_start_as_clone"/>
-            <block type="control_create_clone_of">
-                <value name="CLONE_OPTION">
-                    <shadow type="control_create_clone_of_menu"/>
-                </value>
-            </block>
-            <block type="control_delete_this_clone"/>
-        `}
+
+
+
         ${categorySeparator}
     </category>
     `;
 };
+// ${blockSeparator}
+//         ${isStage ? `
+//             <block type="control_create_clone_of">
+//                 <value name="CLONE_OPTION">
+//                     <shadow type="control_create_clone_of_menu"/>
+//                 </value>
+//             </block>
+//         ` : `
+//             <block type="control_start_as_clone"/>
+//             <block type="control_create_clone_of">
+//                 <value name="CLONE_OPTION">
+//                     <shadow type="control_create_clone_of_menu"/>
+//                 </value>
+//             </block>
+//             <block type="control_delete_this_clone"/>
+//         `}
 
 const sensing = function (isStage) {
     const name = ScratchBlocks.ScratchMsgs.translate('SENSING_ASK_TEXT', 'What\'s your name?');
@@ -686,6 +689,188 @@ const operators = function () {
     `;
 };
 
+const uav = function () {
+    return `
+    <category
+        name="无人机"
+        id="uav"
+        colour="#333333"
+        secondaryColour="#444444">
+        <block type="uav_cal"/>
+        <block type="uav_lock"/>
+        <block type="uav_unlock"/>
+        <block type="uav_takeoff"/>
+        <block type="uav_landing"/>
+        <block type="uav_fly_rise">
+            <value name="NUM">
+                <shadow type="math_number">
+                    <field name="NUM">30</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="uav_fly_down">
+            <value name="NUM">
+                <shadow type="math_number">
+                    <field name="NUM">30</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="uav_fly_direction">
+            <value name="NUM">
+                <shadow type="math_number">
+                    <field name="NUM">30</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="uav_fly_turn">
+            <value name="NUM">
+                <shadow type="math_number">
+                    <field name="NUM">30</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="uav_fly_flip">
+        </block>
+    </category>
+    `;
+};
+
+const uavoperators = function () {
+    const apple = ScratchBlocks.ScratchMsgs.translate('OPERATORS_JOIN_APPLE', 'apple');
+    const banana = ScratchBlocks.ScratchMsgs.translate('OPERATORS_JOIN_BANANA', 'banana');
+    const letter = ScratchBlocks.ScratchMsgs.translate('OPERATORS_LETTEROF_APPLE', 'a');
+    return `
+    <category name="%{BKY_CATEGORY_OPERATORS}" id="operators" colour="#000066" secondaryColour="#003366">
+        <block type="uavoperator_arithmetic">
+            <value name="NUM1">
+                <shadow type="math_number">
+                    <field name="NUM"/>
+                </shadow>
+            </value>
+            <value name="NUM2">
+                <shadow type="math_number">
+                    <field name="NUM"/>
+                </shadow>
+            </value>
+        </block>
+        ${blockSeparator}
+        <block type="uavoperator_random">
+            <value name="FROM">
+                <shadow type="math_number">
+                    <field name="NUM">1</field>
+                </shadow>
+            </value>
+            <value name="TO">
+                <shadow type="math_number">
+                    <field name="NUM">10</field>
+                </shadow>
+            </value>
+        </block>
+        ${blockSeparator}
+        <block type="uavoperator_compare">
+            <value name="NUM1">
+                <shadow type="math_number">
+                    <field name="NUM">10</field>
+                </shadow>
+            </value>
+            <value name="NUM2">
+                <shadow type="math_number">
+                    <field name="NUM">50</field>
+                </shadow>
+            </value>
+        </block>
+
+        ${blockSeparator}
+        <block type="uavoperator_logic"/>
+        ${blockSeparator}
+        <block type="uavoperator_join">
+            <value name="STRING1">
+                <shadow type="text">
+                    <field name="TEXT">${apple} </field>
+                </shadow>
+            </value>
+            <value name="STRING2">
+                <shadow type="text">
+                    <field name="TEXT">${banana}</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="uavoperator_letter_of">
+            <value name="LETTER">
+                <shadow type="math_whole_number">
+                    <field name="NUM">1</field>
+                </shadow>
+            </value>
+            <value name="STRING">
+                <shadow type="text">
+                    <field name="TEXT">${apple}</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="uavoperator_length">
+            <value name="STRING">
+                <shadow type="text">
+                    <field name="TEXT">${apple}</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="uavoperator_contains" id="uavoperator_contains">
+          <value name="STRING1">
+            <shadow type="text">
+              <field name="TEXT">${apple}</field>
+            </shadow>
+          </value>
+          <value name="STRING2">
+            <shadow type="text">
+              <field name="TEXT">${letter}</field>
+            </shadow>
+          </value>
+        </block>
+        ${blockSeparator}
+        <block type="uavoperator_mod">
+            <value name="NUM1">
+                <shadow type="math_number">
+                    <field name="NUM"/>
+                </shadow>
+            </value>
+            <value name="NUM2">
+                <shadow type="math_number">
+                    <field name="NUM"/>
+                </shadow>
+            </value>
+        </block>
+        <block type="uavoperator_round">
+            <value name="NUM">
+                <shadow type="math_number">
+                    <field name="NUM"/>
+                </shadow>
+            </value>
+        </block>
+        ${blockSeparator}
+        <block type="uavoperator_mathop">
+            <value name="NUM">
+                <shadow type="math_number">
+                    <field name="NUM"/>
+                </shadow>
+            </value>
+        </block>
+        ${categorySeparator}
+    </category>
+    `;
+};
+
+const gesture = function () {
+    return `
+    <category
+        name="手势"
+        id="gesture"
+        colour="#4C97FF"
+        secondaryColour="#3373CC">
+        <block type="gesture_start"></block>
+    </category>
+    `;
+}
+
 const variables = function () {
     return `
     <category
@@ -752,18 +937,24 @@ const makeToolboxXML = function (isStage, targetId, categoriesXML = [],
     const operatorsXML = moveCategory('operators') || operators(isStage, targetId);
     const variablesXML = moveCategory('data') || variables(isStage, targetId);
     const myBlocksXML = moveCategory('procedures') || myBlocks(isStage, targetId);
+    const uavXML = moveCategory('uav') || uav(isStage, targetId);
+    const uavoperatorsXML = moveCategory('uavoperators') || uavoperators(isStage, targetId);
+    const gestureXML = moveCategory('gesture') || gesture(isStage, targetId);
 
     const everything = [
         xmlOpen,
-        motionXML, gap,
-        looksXML, gap,
-        soundXML, gap,
+        uavXML, gap,
+        gestureXML, gap,
+        // motionXML, gap,
+        // looksXML, gap,
+        // soundXML, gap,
         eventsXML, gap,
         controlXML, gap,
-        sensingXML, gap,
+        // sensingXML, gap,
         operatorsXML, gap,
-        // variablesXML, gap,
-        // myBlocksXML
+        // uavoperatorsXML, gap,
+        variablesXML, gap,
+        myBlocksXML
     ];
 
     for (const extensionCategory of categoriesXML) {

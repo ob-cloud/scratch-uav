@@ -204,7 +204,7 @@ const GUIComponent = props => {
                             {/* Sidebar ToolBox */}
                             <Controls
                                 vm={vm}
-                                className={styles.fixedBtn} 
+                                className={styles.fixedBtn}
                             />
                             <Box className={styles.blocksWrapper}>
                                 {/* <Box className={classNames(styles.stageAndTargetWrapper, styles[stageSize])}>
