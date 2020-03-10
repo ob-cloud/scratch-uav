@@ -332,7 +332,7 @@ $fade-out-distance: 15px;
     display: flex;
     align-items: center;
     justify-content: left;
-    padding-left: 4rem;
+    padding-left: 1rem;
 }
 .onbright-logo img {
     height: 2.1rem;
