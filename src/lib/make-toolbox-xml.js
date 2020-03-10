@@ -937,8 +937,8 @@ const makeToolboxXML = function (isStage, targetId, categoriesXML = [],
         eventsXML, gap,
         controlXML, gap,
         // sensingXML, gap,
-        // operatorsXML, gap,
-        uavoperatorsXML, gap,
+        operatorsXML, gap,
+        // uavoperatorsXML, gap,
         variablesXML, gap,
         myBlocksXML
     ];
