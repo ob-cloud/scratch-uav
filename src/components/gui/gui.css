@@ -8,8 +8,8 @@
 
 .body-wrapper {
     height: calc(100%);
-    /* height: calc(100% - $menu-bar-height); */
-    background-color: $ui-primary;
+    height: calc(100% - $menu-bar-height);
+    /* background-color: $ui-primary; */
 }
 
 .body-wrapper * {
@@ -323,7 +323,18 @@ $fade-out-distance: 15px;
 /* 启动按钮布局 */
 .fixed-btn {
     position: fixed;
-    right: 20px;
-    top: 20px;
+    right: 0.5rem;
+    top: 0.5rem;
     z-index: 99;
+}
+.onbright-logo {
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding-left: 4rem;
+}
+.onbright-logo img {
+    height: 2.1rem;
+    src: url('./logo.png');
 }
