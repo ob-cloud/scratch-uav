@@ -859,6 +859,18 @@ const uavoperators = function () {
     `;
 };
 
+const gesture = function () {
+    return `
+    <category
+        name="手势"
+        id="gesture"
+        colour="#4C97FF"
+        secondaryColour="#3373CC">
+        <block type="gesture_start"></block>
+    </category>
+    `;
+}
+
 const variables = function () {
     return `
     <category
@@ -927,10 +939,12 @@ const makeToolboxXML = function (isStage, targetId, categoriesXML = [],
     const myBlocksXML = moveCategory('procedures') || myBlocks(isStage, targetId);
     const uavXML = moveCategory('uav') || uav(isStage, targetId);
     const uavoperatorsXML = moveCategory('uavoperators') || uavoperators(isStage, targetId);
+    const gestureXML = moveCategory('gesture') || gesture(isStage, targetId);
 
     const everything = [
         xmlOpen,
         uavXML, gap,
+        gestureXML, gap,
         // motionXML, gap,
         // looksXML, gap,
         // soundXML, gap,
