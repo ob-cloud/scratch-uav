@@ -729,12 +729,7 @@ const uav = function () {
                 </shadow>
             </value>
         </block>
-        <block type="uav_send_message">
-            <value name="MSG">
-                <shadow type="text">
-                    <field name="TEXT">message</field>
-                </shadow>
-            </value>
+        <block type="uav_fly_flip">
         </block>
     </category>
     `;
@@ -936,8 +931,8 @@ const makeToolboxXML = function (isStage, targetId, categoriesXML = [],
     const everything = [
         xmlOpen,
         uavXML, gap,
-        motionXML, gap,
-        looksXML, gap,
+        // motionXML, gap,
+        // looksXML, gap,
         // soundXML, gap,
         eventsXML, gap,
         controlXML, gap,
