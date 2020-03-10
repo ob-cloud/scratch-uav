@@ -41,6 +41,7 @@ import addExtensionIcon from './icon--extensions.svg';
 import codeIcon from './icon--code.svg';
 import costumesIcon from './icon--costumes.svg';
 import soundsIcon from './icon--sounds.svg';
+import onbrightLogo from './logo.png';
 
 const messages = defineMessages({
     addExtension: {
@@ -119,7 +120,6 @@ const GUIComponent = props => {
     if (children) {
         return <Box {...componentProps}>{children}</Box>;
     }
-
     const tabClassNames = {
         tabs: styles.tabs,
         tab: classNames(tabStyles.reactTabsTab, styles.tab),
@@ -191,7 +191,13 @@ const GUIComponent = props => {
                         onRequestClose={onRequestCloseBackdropLibrary}
                     />
                 ) : null} */}
-
+                <div className={classNames(styles.onbrightLogo)}>
+                    <img
+                        alt="on-bright"
+                        draggable={false}
+                        src={onbrightLogo}
+                    />
+                </div>
                 <Box className={styles.bodyWrapper}>
                     <Box className={styles.flexWrapper}>
                         <Box className={styles.editorWrapper}>
