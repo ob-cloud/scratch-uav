@@ -867,6 +867,9 @@ const gesture = function () {
         colour="#4C97FF"
         secondaryColour="#3373CC">
         <block type="gesture_start"></block>
+        <block type="detect_face_unlock"/>
+        <block type="detect_gesture"/>
+        <block type="detect_situation"/>
     </category>
     `;
 }
