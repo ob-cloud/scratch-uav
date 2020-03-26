@@ -870,6 +870,9 @@ const gesture = function () {
         <block type="detect_face_unlock"/>
         <block type="detect_gesture"/>
         <block type="detect_situation"/>
+        <block type="face_reg"/>
+        <block type="open_camera"/>
+        <block type="close_camera"/>
     </category>
     `;
 }
