@@ -862,14 +862,15 @@ const uavoperators = function () {
 const gesture = function () {
     return `
     <category
-        name="手势"
+        name="视觉功能"
         id="gesture"
         colour="#4C97FF"
         secondaryColour="#3373CC">
         <block type="gesture_start"></block>
-        <block type="detect_face_unlock"/>
+        <block type="gesture_stop"/>
         <block type="detect_gesture"/>
         <block type="detect_situation"/>
+        <block type="detect_face_unlock"/>
         <block type="face_reg"/>
         <block type="camera_open"/>
         <block type="camera_close"/>
