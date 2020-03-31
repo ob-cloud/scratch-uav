@@ -871,12 +871,13 @@ const gesture = function () {
         <block type="detect_gesture"/>
         <block type="detect_situation"/>
         <block type="detect_face_unlock"/>
-        <block type="face_reg"/>
+
         <block type="camera_open"/>
         <block type="camera_close"/>
     </category>
     `;
 }
+//<block type="face_reg"/>
 
 const variables = function () {
     return `
