@@ -731,6 +731,7 @@ const uav = function () {
         </block>
         <block type="uav_fly_flip">
         </block>
+        <block type="uav_estop"/>
     </category>
     `;
 };
