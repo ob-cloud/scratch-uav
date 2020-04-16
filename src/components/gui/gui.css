@@ -193,11 +193,12 @@
         Only reason we need this, is so .targetWrapper, which holds the selectors,
         goes to full vertical height of the window
     */
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     /* pad entire wrapper to the left and right; allow children to fill width */
     padding-left: $space;
     padding-right: $space;
+    display: none;
 }
 
 .stage-and-target-wrapper.large {
@@ -333,6 +334,7 @@ $fade-out-distance: 15px;
     align-items: center;
     justify-content: left;
     padding-left: 1rem;
+    background-color: hsla(215, 100%, 65%, 1);
 }
 .onbright-logo img {
     height: 2.1rem;
