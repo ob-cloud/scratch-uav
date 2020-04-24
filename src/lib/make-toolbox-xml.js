@@ -869,12 +869,12 @@ const gesture = function () {
         secondaryColour="#3373CC">
         <block type="gesture_start"></block>
         <block type="gesture_stop"/>
-        <block type="detect_gesture"/>
-        <block type="detect_situation"/>
-        <block type="detect_face_unlock"/>
+        <block type="gesture_detect_gesture"/>
+        <block type="gesture_detect_situation"/>
+        <block type="gesture_detect_face_unlock"/>
 
-        <block type="camera_open"/>
-        <block type="camera_close"/>
+        <block type="gesture_camera_open"/>
+        <block type="gesture_camera_close"/>
     </category>
     `;
 }
