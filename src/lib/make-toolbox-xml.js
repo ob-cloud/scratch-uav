@@ -878,6 +878,23 @@ const gesture = function () {
     </category>
     `;
 }
+
+const car = function () {
+    return `
+    <category
+        name="OB小车"
+        id="car"
+        colour="#9966FF"
+        secondaryColour="#774DCB">
+        <block type="car_move_action"></block>
+        <block type="car_turn_action"/>
+        <block type="car_stop"/>
+        <block type="car_reset_action"/>
+        <block type="car_exec_action"/>
+        <block type="car_collect_env"/>
+    </category>
+    `;
+}
 //<block type="face_reg"/>
 
 const variables = function () {
@@ -949,11 +966,13 @@ const makeToolboxXML = function (isStage, targetId, categoriesXML = [],
     const uavXML = moveCategory('uav') || uav(isStage, targetId);
     const uavoperatorsXML = moveCategory('uavoperators') || uavoperators(isStage, targetId);
     const gestureXML = moveCategory('gesture') || gesture(isStage, targetId);
+    const carXML = moveCategory('car') || car(isStage, targetId);
 
     const everything = [
         xmlOpen,
         uavXML, gap,
         gestureXML, gap,
+        carXML, gap,
         // motionXML, gap,
         // looksXML, gap,
         // soundXML, gap,
