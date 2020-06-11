@@ -696,7 +696,8 @@ const uav = function () {
         id="uav"
         colour="#333333"
         secondaryColour="#444444">
-        <block type="uav_cal"/>
+        <block type="uav_cal">
+        </block>
         <block type="uav_lock"/>
         <block type="uav_unlock"/>
         <block type="uav_takeoff"/>
@@ -892,10 +893,88 @@ const car = function () {
         <block type="car_reset_action"/>
         <block type="car_exec_action"/>
         <block type="car_collect_env"/>
+        <block type="car_turn_around"/>
     </category>
     `;
 }
 //<block type="face_reg"/>
+
+const marshalling = function () {
+    return `
+    <category
+        name="多机编队"
+        id="marshalling"
+        colour="#D65CD6"
+        secondaryColour="#BD42BD">
+        <block type="marshalling_group">
+            <value name="GROUP">
+                <shadow type="text">
+                    <field name="TEXT"/>
+                </shadow>
+            </value>
+            <value name="DEVICE">
+                <shadow type="text">
+                    <field name="TEXT"/>
+                </shadow>
+            </value>
+        </block>
+        <block type="marshalling_group_range">
+            <value name="GROUP">
+                <shadow type="text">
+                    <field name="TEXT"/>
+                </shadow>
+            </value>
+            <value name="DEVICE">
+                <shadow type="text">
+                    <field name="TEXT"/>
+                </shadow>
+            </value>
+            <value name="DEVICE1">
+                <shadow type="text">
+                    <field name="TEXT"/>
+                </shadow>
+            </value>
+        </block>
+        <block type="marshalling_req_data">
+            <value name="DEVICE">
+                <shadow type="text">
+                    <field name="TEXT"/>
+                </shadow>
+            </value>
+        </block>
+        <block type="marshalling_control_light_on"></block>
+        <block type="marshalling_control_light_off"></block>
+    </category>
+    `;
+}
+
+const arm = function () {
+    return `
+    <category
+        name="机械臂"
+        id="arm"
+        colour="#4CBFE6"
+        secondaryColour="#2E8EB8">
+        <block type="arm_reset"></block>
+        <block type="arm_clamp"/>
+        <block type="arm_unclamp"/>
+        <block type="arm_move_horizontal">
+            <value name="VALUE">
+                <shadow type="math_number">
+                    <field name="NUM">30</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="arm_move_vertical">
+            <value name="VALUE">
+                <shadow type="math_number">
+                    <field name="NUM">30</field>
+                </shadow>
+            </value>
+        </block>
+    </category>
+    `;
+}
 
 const variables = function () {
     return `
@@ -967,12 +1046,16 @@ const makeToolboxXML = function (isStage, targetId, categoriesXML = [],
     const uavoperatorsXML = moveCategory('uavoperators') || uavoperators(isStage, targetId);
     const gestureXML = moveCategory('gesture') || gesture(isStage, targetId);
     const carXML = moveCategory('car') || car(isStage, targetId);
+    const marshallingXML = moveCategory('marshalling') || marshalling(isStage, targetId);
+    const armXML = moveCategory('marshalling') || arm(isStage, targetId);
 
     const everything = [
         xmlOpen,
         uavXML, gap,
         gestureXML, gap,
         carXML, gap,
+        armXML, gap,
+        marshallingXML, gap,
         // motionXML, gap,
         // looksXML, gap,
         // soundXML, gap,
