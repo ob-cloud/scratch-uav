@@ -887,7 +887,7 @@ const car = function () {
         id="car"
         colour="#9966FF"
         secondaryColour="#774DCB">
-        <block type="car_move_action"></block>
+        <block type="car_move_forward"></block>
         <block type="car_turn_action"/>
         <block type="car_stop"/>
         <block type="car_reset_action"/>
@@ -897,6 +897,7 @@ const car = function () {
     </category>
     `;
 }
+{/* <block type="car_move_action"></block> */}
 //<block type="face_reg"/>
 
 const marshalling = function () {
