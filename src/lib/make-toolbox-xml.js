@@ -890,7 +890,7 @@ const car = function () {
         <block type="car_move_forward">
             <value name="NUM">
                 <shadow type="math_number">
-                    <field name="NUM">30</field>
+                    <field name="NUM">1</field>
                 </shadow>
             </value>
         </block>
