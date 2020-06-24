@@ -925,6 +925,23 @@ const marshalling = function () {
                 </shadow>
             </value>
         </block>
+        <block type="marshalling_group_range_fn">
+            <value name="GROUP">
+                <shadow type="text">
+                    <field name="TEXT"/>
+                </shadow>
+            </value>
+            <value name="DEVICE">
+                <shadow type="text">
+                    <field name="TEXT"/>
+                </shadow>
+            </value>
+            <value name="DEVICE1">
+                <shadow type="text">
+                    <field name="TEXT"/>
+                </shadow>
+            </value>
+        </block>
         <block type="marshalling_group_range">
             <value name="GROUP">
                 <shadow type="text">
