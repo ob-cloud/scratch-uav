@@ -1000,6 +1000,31 @@ const arm = function () {
     `;
 }
 
+const scene = function () {
+    return `
+    <category
+        name="场景"
+        id="scene"
+        colour="#006699"
+        secondaryColour="#0066CC">
+        <block type="scene_control_light">
+            <value name="BRIGHTNESS">
+                <shadow type="math_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="scene_control_volume">
+            <value name="VOLUME">
+                <shadow type="math_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+        </block>
+    </category>
+    `;
+}
+
 const variables = function () {
     return `
     <category
@@ -1072,6 +1097,7 @@ const makeToolboxXML = function (isStage, targetId, categoriesXML = [],
     const carXML = moveCategory('car') || car(isStage, targetId);
     const marshallingXML = moveCategory('marshalling') || marshalling(isStage, targetId);
     const armXML = moveCategory('marshalling') || arm(isStage, targetId);
+    const sceneXML = moveCategory('scene') || scene(isStage, targetId);
 
     const everything = [
         xmlOpen,
@@ -1080,6 +1106,7 @@ const makeToolboxXML = function (isStage, targetId, categoriesXML = [],
         carXML, gap,
         armXML, gap,
         marshallingXML, gap,
+        sceneXML, gap,
         // motionXML, gap,
         // looksXML, gap,
         // soundXML, gap,
