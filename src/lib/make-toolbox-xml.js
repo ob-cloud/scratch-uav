@@ -1008,7 +1008,17 @@ const scene = function () {
         colour="#006699"
         secondaryColour="#0066CC">
         <block type="scene_control_light">
-            <value name="BRIGHTNESS">
+            <value name="RED">
+                <shadow type="math_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+            <value name="BLUE">
+                <shadow type="math_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+            <value name="GREEN">
                 <shadow type="math_number">
                     <field name="NUM">0</field>
                 </shadow>
@@ -1016,6 +1026,11 @@ const scene = function () {
         </block>
         <block type="scene_control_volume">
             <value name="VOLUME">
+                <shadow type="math_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+            <value name="TIME">
                 <shadow type="math_number">
                     <field name="NUM">0</field>
                 </shadow>
