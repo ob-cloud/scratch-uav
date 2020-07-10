@@ -941,24 +941,13 @@ const marshalling = function () {
                     <field name="TEXT"/>
                 </shadow>
             </value>
-        </block>
-        <block type="marshalling_group_range">
-            <value name="GROUP">
-                <shadow type="text">
-                    <field name="TEXT"/>
-                </shadow>
-            </value>
-            <value name="DEVICE">
-                <shadow type="text">
-                    <field name="TEXT"/>
-                </shadow>
-            </value>
-            <value name="DEVICE1">
+            <value name="DEVICE2">
                 <shadow type="text">
                     <field name="TEXT"/>
                 </shadow>
             </value>
         </block>
+
         <block type="marshalling_req_data">
             <value name="DEVICE">
                 <shadow type="text">
@@ -966,11 +955,31 @@ const marshalling = function () {
                 </shadow>
             </value>
         </block>
-        <block type="marshalling_control_light_on"></block>
-        <block type="marshalling_control_light_off"></block>
+
     </category>
     `;
 }
+
+// <block type="marshalling_group_range">
+//     <value name="GROUP">
+//         <shadow type="text">
+//             <field name="TEXT"/>
+//         </shadow>
+//     </value>
+//     <value name="DEVICE">
+//         <shadow type="text">
+//             <field name="TEXT"/>
+//         </shadow>
+//     </value>
+//     <value name="DEVICE1">
+//         <shadow type="text">
+//             <field name="TEXT"/>
+//         </shadow>
+//     </value>
+// </block>
+
+// <block type="marshalling_control_light_on"></block>
+// <block type="marshalling_control_light_off"></block>
 
 const arm = function () {
     return `
