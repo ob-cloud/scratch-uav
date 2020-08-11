@@ -1,6 +1,6 @@
 # scratch-uav-united
 
-综合版本，包含所有原始功能
+综合版本，包含所有原始功能 及 自定义模块功能
 
 # scratch-gui
 #### Scratch GUI is a set of React components that comprise the interface for creating and running Scratch 3.0 projects
