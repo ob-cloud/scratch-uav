@@ -535,7 +535,7 @@ class Blocks extends React.Component {
                     onDrop={this.handleDrop}
                     {...props}
                 />
-                {/* {this.state.prompt ? (
+                {this.state.prompt ? (
                     <Prompt
                         defaultValue={this.state.prompt.defaultValue}
                         isStage={vm.runtime.getEditingTarget().isStage}
@@ -554,7 +554,7 @@ class Blocks extends React.Component {
                         onCategorySelected={this.handleCategorySelected}
                         onRequestClose={onRequestCloseExtensionLibrary}
                     />
-                ) : null} */}
+                ) : null}
 
                 {/* 自定义积木模块 */}
                 {customProceduresVisible ? (
