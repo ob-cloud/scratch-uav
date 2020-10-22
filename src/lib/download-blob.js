@@ -42,7 +42,6 @@ export default (filename, blob) => {
     // }
 
     const url = window.URL.createObjectURL(blob);
-    console.log('blob -=-=-= ', blob, url)
     downloadLink.href = url;
     downloadLink.download = filename;
     downloadLink.type = blob.type;
