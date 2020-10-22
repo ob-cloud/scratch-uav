@@ -28,17 +28,18 @@ export default (filename, blob) => {
         navigator.msSaveOrOpenBlob(blob, filename);
         return;
     }
-    const isPhone = (/Android|webOS|iPhone|iPod|BlackBerry|iPad/i.test(navigator.userAgent))
-    if (isPhone) {
-        return getBlobDataUrl(blob).then(url => {
-            downloadLink.href = url;
-            downloadLink.download = filename;
-            downloadLink.type = blob.type;
-            downloadLink.click();
-            window.URL.revokeObjectURL(url);
-            document.body.removeChild(downloadLink);
-        })
-    }
+    // 兼容webview下载
+    // const isPhone = (/Android|webOS|iPhone|iPod|BlackBerry|iPad/i.test(navigator.userAgent))
+    // if (isPhone) {
+    //     return getBlobDataUrl(blob).then(url => {
+    //         downloadLink.href = url;
+    //         downloadLink.download = filename;
+    //         downloadLink.type = blob.type;
+    //         downloadLink.click();
+    //         window.URL.revokeObjectURL(url);
+    //         document.body.removeChild(downloadLink);
+    //     })
+    // }
 
     const url = window.URL.createObjectURL(blob);
     console.log('blob -=-=-= ', blob, url)
