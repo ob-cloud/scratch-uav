@@ -946,6 +946,21 @@ const marshalling = function () {
                     <field name="TEXT"/>
                 </shadow>
             </value>
+            <value name="DEVICE3">
+                <shadow type="text">
+                    <field name="TEXT"/>
+                </shadow>
+            </value>
+            <value name="DEVICE4">
+                <shadow type="text">
+                    <field name="TEXT"/>
+                </shadow>
+            </value>
+            <value name="DEVICE5">
+                <shadow type="text">
+                    <field name="TEXT"/>
+                </shadow>
+            </value>
         </block>
 
         <block type="marshalling_req_data">
@@ -955,7 +970,6 @@ const marshalling = function () {
                 </shadow>
             </value>
         </block>
-
     </category>
     `;
 }
@@ -1028,6 +1042,16 @@ const scene = function () {
                 </shadow>
             </value>
             <value name="GREEN">
+                <shadow type="math_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+            <value name="ONTIME">
+                <shadow type="math_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+            <value name="OFFTIME">
                 <shadow type="math_number">
                     <field name="NUM">0</field>
                 </shadow>
