@@ -961,6 +961,11 @@ const marshalling = function () {
                     <field name="TEXT"/>
                 </shadow>
             </value>
+            <value name="DEVICE6">
+                <shadow type="text">
+                    <field name="TEXT"/>
+                </shadow>
+            </value>
         </block>
 
         <block type="marshalling_req_data">
