@@ -26,6 +26,13 @@ const reducer = function (state, action) {
 };
 
 const setFullScreen = function (isFullScreen) {
+    try { // 手机APP 舞台全屏时按钮被手机上层原生控件覆盖问题处理
+        const isPhone = (/Android|webOS|iPhone|iPod|BlackBerry|iPad/i.test(navigator.userAgent))
+        if (isPhone) {
+            require('dsbridge').call("availableBtn", isFullScreen ? '1001' : '1002')
+        }
+    } catch (error) {}
+
     return {
         type: SET_FULL_SCREEN,
         isFullScreen: isFullScreen
