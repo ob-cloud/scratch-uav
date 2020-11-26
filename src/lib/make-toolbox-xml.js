@@ -925,46 +925,11 @@ const marshalling = function () {
             </value>
         </block>
         <block type="marshalling_group_range_fn">
-            <value name="GROUP">
-                <shadow type="text">
-                    <field name="TEXT"/>
-                </shadow>
-            </value>
-            <value name="DEVICE">
-                <shadow type="text">
-                    <field name="TEXT"/>
-                </shadow>
-            </value>
-            <value name="DEVICE1">
-                <shadow type="text">
-                    <field name="TEXT"/>
-                </shadow>
-            </value>
-            <value name="DEVICE2">
-                <shadow type="text">
-                    <field name="TEXT"/>
-                </shadow>
-            </value>
-            <value name="DEVICE3">
-                <shadow type="text">
-                    <field name="TEXT"/>
-                </shadow>
-            </value>
-            <value name="DEVICE4">
-                <shadow type="text">
-                    <field name="TEXT"/>
-                </shadow>
-            </value>
-            <value name="DEVICE5">
-                <shadow type="text">
-                    <field name="TEXT"/>
-                </shadow>
-            </value>
-            <value name="DEVICE6">
-                <shadow type="text">
-                    <field name="TEXT"/>
-                </shadow>
-            </value>
+          <value name="GROUP">
+            <shadow type="matrix">
+              <field name="MATRIX">0101010101100010101000100</field>
+            </shadow>
+          </value>
         </block>
 
         <block type="marshalling_req_data">
